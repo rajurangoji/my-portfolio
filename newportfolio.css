@@ -1,0 +1,931 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+svg {
+    font-family: "Russo One", sans-serif;
+    width: 100%;
+    height: 100%;
+
+}
+
+svg text {
+
+    animation: stroke 5s infinite alternate;
+    stroke-width: 1;
+    stroke: #365FA0;
+    font-size: 100px;
+}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: rgb(7, 7, 7);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: rgb(2, 2, 2);
+    }
+
+    80% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: rgb(4, 4, 4);
+        stroke-width: 3;
+    }
+
+    100% {
+        fill: rgb(0, 0, 0);
+        stroke: rgba(54, 95, 160, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
+
+.wrapper {
+    background-color: transparent;
+}
+
+/* 
+scroll bar */
+
+::-webkit-scrollbar{
+    display: flex;
+    
+}
+::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(45deg, #1be278 20%, #dbd529 100%);
+    border-radius: 50px;
+    width: 5px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+    
+}
+::-webkit-scrollbar-track{
+    width: 10px;
+    background-color: transparent;
+}
+
+
+
+/* navabar */
+nav {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    /* background-color: transparent; */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 0px 10px rgb(143, 139, 139);
+    position: sticky;
+    top: 1px;
+    backdrop-filter: blur(30px);
+    z-index: 9999;
+}
+
+.nav-ul {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+nav ul li {
+    font-size: 21px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+/* hero section */
+
+.hero {
+    height: 640px;
+    width: 100%;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    display: flex;
+}
+
+.content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.intro {
+    width: 80%;
+    height: 400px;
+    /* background-color: red; */
+
+}
+
+.intro h1 {
+    font-size: 50px;
+}
+
+#typed {
+    /* color: rgb(197, 153, 20); */
+    color: #e8bf0b;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.buttons {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.res {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.res:hover {
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+#hire:hover {
+    box-shadow: 8px 7px 7px rgb(252, 252, 252);
+}
+
+.buttons button a {
+    text-decoration: none;
+    height: 10px;
+    color: white;
+}
+.res a {
+    text-decoration: none;
+    height: 10px;
+    color: white;
+}
+
+#hire {
+    background-color: black;
+    color: white;
+    padding: 3px 15px;
+    border-radius: 10px;
+}
+
+#resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: black;
+}
+.dwn-res{
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* icons */
+
+.icons {
+    height: 50px;
+    width: 250px;
+    margin-left: 60px;
+    margin-top: 30px;
+    /* background-color: #8fd3f4; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.icons a {
+    color: black;
+}
+
+.icons i {
+    font-size: 28px;
+    margin: 0px 20px;
+}
+
+.icons i:hover {
+    transform: scale(1.3);
+    transition: all 0.3s ease;
+    /* box-shadow: 0px 0px 10px black; */
+    filter: drop-shadow(0px 0px 10px rgb(8, 219, 145));
+}
+
+/* content image */
+.content-image {
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg {
+    height: 430px;
+    width: 430px;
+    background-image: linear-gradient(45deg, #85FFBD 20%, #FFFB7D 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 100px;
+    z-index: 5;
+}
+
+.bg img {
+    height: 430px;
+    width: 390px;
+    margin-top: 105px;
+    filter: drop-shadow(0px 0px 10px black);
+    border-radius: 50%;
+
+}
+
+.bg2 {
+    height: 180px;
+    width: 180px;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: 90px;
+    right: 140px;
+    z-index: 4;
+
+}
+
+.bg3 {
+    height: 120px;
+    width: 120px;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    right: 550px;
+    z-index: 4;
+
+}
+
+.bg4 {
+    position: relative;
+    top: 250px;
+    right: 320px;
+}
+
+.bg4 marquee {
+    color: black;
+    font-size: 20px;
+
+}
+
+
+/* about section */
+.about {
+    height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 60px;
+    /* background-color: rgb(147, 115, 115); */
+}
+
+#about-me-head {
+    color: #e8c00b1a;
+    font-size: 300px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.about h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: capitalize;
+    margin-top: 50px;
+    margin-left: 75px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    font-size: 40px;
+
+}
+
+.main-about {
+    position: absolute;
+    top: 100px;
+    left: 170px;
+    width: 80%;
+
+}
+
+.about-list-items li {
+    list-style-type: none;
+    color: rgb(56, 56, 56);
+    font-size: 25px;
+    word-spacing: 15px;
+    letter-spacing: 1px;
+    margin-top: 25px;
+}
+
+.about-list-items li::first-letter {
+    font-size: 39px;
+    color: rgb(178, 245, 22);
+}
+
+.about-list-items li:hover {
+    transform: scale(1.05);
+    transition: all 0.6s ease;
+}
+
+.about-list-items li i {
+    color: black;
+    font-weight: 700;
+}
+
+
+
+
+
+/* skills section */
+
+.skills {
+    width: 100%;
+    height: 700px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#bg-head-skills {
+    text-transform: uppercase;
+    color: #e8c00b1a;
+    font-size: 400px;
+    font-weight: 900;
+    font-family: none;
+
+}
+
+.skills h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: capitalize;
+    margin-top: 50px;
+    margin-left: 75px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    font-size: 40px;
+
+}
+
+.skills h3 {
+    position: absolute;
+    top: 95px;
+    left: 75px;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    font-weight: 100;
+
+}
+
+/* html */
+.languages {
+    position: absolute;
+    top: 150px;
+    left: 170px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+}
+
+.html {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: capitalize;
+}
+
+.percentage {
+    position: relative;
+}
+
+.track {
+    height: 10px;
+    width: 550px;
+    background-color: #b1b0af;
+    border-radius: 10px;
+
+}
+
+.track-percentage {
+    height: 10px;
+    width: 530px;
+    background-color: #e8bf0b;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+}
+
+#track-css {
+    height: 10px;
+    width: 480px;
+    background-color: #e8bf0b;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+
+}
+
+.javascript,
+.react {
+    height: 10px;
+    width: 430px;
+    background-color: #e8bf0b;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+
+}
+
+.bootstrap {
+    height: 10px;
+    width: 480px;
+    background-color: #e8bf0b;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+
+}
+
+
+/*  backend languages */
+
+.backend {
+    height: 500px;
+    width: 500px;
+    /* background-image: linear-gradient(45deg, #85ffbe40 0%, #fffb7d44 100%); */
+    position: absolute;
+    right: 130px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0px 0px 50px rgb(183, 182, 182);
+
+}
+
+.backend-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.back-lang {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    /* color: white; */
+}
+
+.back-lang i {
+    font-size: 60px;
+}
+
+.nodejs,
+.mangodb,
+.java,
+.sql {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+
+}
+
+
+/* project sections */
+
+.projects {
+    height: 635px;
+    width: 100%;
+    position: relative;
+}
+
+#bg-head-projects {
+    color: #e8c00b1a;
+    font-size: 270px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.main-projects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 130px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.projects h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: capitalize;
+    margin-top: 50px;
+    margin-left: 75px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    font-size: 40px;
+
+
+}
+
+.main-projects img {
+    height: 300px;
+    width: 500px;
+    border-radius: 30px;
+
+}
+
+.project1,
+.project2 {
+    height: 300px;
+    width: 500px;
+    overflow: hidden;
+}
+
+.box-hover {
+    height: 70px;
+    width: 500px;
+    position: absolute;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    border-radius: 4px;
+    bottom: 0px;
+
+}
+
+.box-hover h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    color: #050505;
+    padding: 10px 30px;
+    font-size: 25px;
+}
+
+.box-hover p {
+    visibility: hidden;
+    opacity: 0;
+    font-size: 18px;
+    padding: 20px;
+
+}
+
+.box-hover .demo-button {
+    visibility: hidden;
+    opacity: 0;
+    font-size: 18px;
+    padding: 20px;
+
+}
+
+.project1:hover img,
+.project2:hover img {
+    filter: blur(10px);
+}
+
+.project1:hover .box-hover,
+.project2:hover .box-hover {
+    height: 300px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.project1:hover p,
+.project2:hover p {
+    opacity: 1;
+    visibility: visible;
+}
+
+.project1:hover .demo-button,
+.project2:hover .demo-button {
+    opacity: 1;
+    visibility: visible;
+}
+
+.demo-button a {
+    height: 20px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    color: #050505;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    text-decoration: none;
+    font-size: large;
+}
+
+.demo-button a:hover {
+    box-shadow: 0px 0px 50px white;
+}
+
+
+
+/* resume section */
+
+.resume-section {
+    width: 100%;
+    height: 700px;
+    clip-path: polygon(24% 0, 100% 14%, 100% 100%, 35% 100%, 0 100%, 0 13%);
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    position: relative;
+}
+.position{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 660px;
+    
+}
+.resume-section h1{
+    text-transform: capitalize;
+    margin-top: 50px;
+    margin-left: 75px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    font-size: 40px;
+}
+.resume-section p{
+    text-transform: capitalize;
+    margin-left: 75px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+}
+.resume-box{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.resume-button{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+}
+.resume-button button{
+    width: fit-content;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: #e8bf0b 2px solid;
+    color: black;
+    outline: transparent;
+    margin-top: 30px;
+    font-size: large;
+
+}
+
+.intership, .education{
+    height: 300px;
+    width: 35%;
+    background-color: transparent;
+    border-radius: 10px;
+    border: #e8bf0b 2px solid;
+    
+    
+}
+.intership h2, .education h2{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: 700;
+    color: #323232;
+}
+.intership p, .education p{
+    margin-left: 10px;
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: 100;
+    color: #535353;
+}
+.intership h3, .education h3{
+    margin-left: 10px;
+    font-size: 19px;
+    margin-left: 20px;
+    font-weight: 100;
+    color: #e8bf0b;
+
+}
+.about-intern, .about-education{
+    height: 200px;
+    width: 100%;
+    overflow: auto;
+
+}
+.about-intern ul, .about-education ul{
+    padding: 30px;
+}
+
+#para{
+    height: 300px;
+    width: 500px;
+    overflow: auto;
+}
+
+
+
+/* contact-section */
+.contact-section{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.touch, .drop-a-message{
+    height: 450px;
+    width: 48%;
+    border-radius: 20px;
+    background-color: rgba(245, 245, 245, 0.347);
+    border: #e8bf0b 2px solid;
+}
+.touch{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.touch-div{
+    display: flex;
+}
+#touch-p{
+    width: 40%;
+    height: 200px;
+    font-size: 55px;
+    margin: 30px;
+}
+#touch-p b{
+    font-size: 85px;
+    color: #e8bf0b;
+}
+#reach{
+    margin: 30px;
+    font-size: 22px;
+}
+.reach-icons{
+    width: 90%;
+    height: 150px;
+    background-color: red;
+    border-radius: 20px;
+    border: #e8bf0b 2px solid;
+    background-color: rgba(255, 255, 255, 0.821);
+    display: flex;
+
+}
+.reach-icons p{
+    margin: 30px;
+}
+.reach-icons i{
+    font-size: 30px;
+}
+
+.design i{
+    margin: 10px;
+}
+
+
+/* drop me a message */
+
+.drop-a-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.drop-a-message h1{
+    font-size: 38px;
+    margin: 20px;
+
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#form input{
+    width: 500px;
+    height: 35px;
+    border-radius: 20px;
+    outline: none;
+    text-indent: 20px;
+    border: #e8bf0b 2px solid;
+    font-size: 20px;
+}
+#form textarea{
+    border-radius: 20px;
+    outline: none;
+    border: #e8bf0b 2px solid;
+    text-indent: 20px;
+    font-size: 20px;
+
+}
+#submit{
+    background-color: white;
+}
+#submit:hover{
+    background-color: #e8bf0b;
+    color: white;
+}
+
+::placeholder{
+    font-size: 20px;
+    color: #05050544;
+}
+
+.footer{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: capitalize;
+
+}
+
+.footer p{
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #e8bf0b;
+    padding: 10px 20px;
+    border-radius: 7px 40px;
+}
+.footer p:hover{
+    background: #d6d7d795;
+    transition: all 0.4s ease;
+
+}
+
+
